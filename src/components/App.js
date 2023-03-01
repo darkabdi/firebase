@@ -1,8 +1,9 @@
-
+import Signup from "./Signup";
+import React from 'react'
 
 function App() {
 return(
-  "hello abdi"
+  <Signup/>
 )
 }
 
