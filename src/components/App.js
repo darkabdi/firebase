@@ -10,7 +10,8 @@ return(
   <Router>
  <AuthProvider>
    <Routes>
-    <Route exact path="/" element={<Dashboard/>}/>
+    <Route exact path="/" element={<Signup/>}/>
+    <Route path="/dashboard" element={<Dashboard/>}/>
     <Route path="/signup" element={<Signup/>}/>
     <Route path="/login" element={<Login/>}/>
    </Routes>
