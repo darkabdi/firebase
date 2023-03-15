@@ -16,10 +16,12 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_AUTH_DEV_CA246 }}
           channelId: live
           projectId: auth-dev-ca246
-    name: Slack Notification
-steps:
-  - uses: actions/checkout@v2
-  - name: Slack Notification
-    uses: rtCamp/action-slack-notify@v2
+  Slack:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+     - uses: rtCamp/action-slack-notify@v2
+    
+    
     env:
       SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
