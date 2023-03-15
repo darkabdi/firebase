@@ -1,8 +1,8 @@
 on: push
-name: Slack Notification Demo
+name: Slack 
 jobs:
   slackNotification:
-    name: Slack Notification
+    name: Slack Notis
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
