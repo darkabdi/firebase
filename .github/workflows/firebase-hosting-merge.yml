@@ -39,5 +39,6 @@ jobs:
     
     env:
       SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-      SLACK_TITLE: ${{ job.status }}
-      SLACK_COLOR: ${{ job.status }}
+      SLACK_TITLE: ${{ jobs.status }}
+      SLACK_COLOR: ${{ jobs.status }}
+      SLACK_ICON_EMOJ: :bell
