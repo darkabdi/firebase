@@ -38,6 +38,4 @@ jobs:
      - uses: rtCamp/action-slack-notify@v2
     env:
       SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-      SLACK_TITLE: ${{ jobs.status }}
-      SLACK_COLOR: ${{ jobs.status }}
       SLACK_ICON_EMOJ: :bell
