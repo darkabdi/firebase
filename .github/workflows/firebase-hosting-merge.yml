@@ -9,7 +9,7 @@ jobs:
    CI:
       runs-on: ubuntu-latest
       steps:
-       - uses: actions/checkout@v2
+       - uses: actions/checkout@v3
        - name: Install modules
          run: npm install
        - name: Run test
@@ -33,7 +33,7 @@ jobs:
    Slack:
     runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v2
+     - uses: actions/checkout@v3
      - uses: rtCamp/action-slack-notify@v2
     
     
