@@ -15,22 +15,11 @@ jobs:
        - name: Run test
          run: npm test
      
-   build_and_deploy-testing:
-    runs-on: ubuntu-latest
-    needs: tests
-    steps:
-      - uses: actions/checkout@v3
-      - run: npm install && npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_AUTH_TEST_CA246 }}
-          channelId: Test
-          projectId: auth-test-ca246
+
  
    build_and_deploy-live:
     runs-on: ubuntu-latest
-    needs: build_and_deploy-testing
+    needs: tests
     steps:
       - uses: actions/checkout@v3
       - run: npm install && npm run build
