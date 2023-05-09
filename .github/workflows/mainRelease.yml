@@ -3,7 +3,7 @@ name: Main release
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   release:
@@ -21,4 +21,4 @@ jobs:
           body_path: CHANGELOG.md
           name: ${{ steps.version.outputs.version }}
           tag_name: ${{ github.ref }}
-          token: ${{ github.secrets.PAT }}
+          token: ${{ secrets.PAT}}
