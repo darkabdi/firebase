@@ -21,6 +21,5 @@ jobs:
           body_path: CHANGELOG.md
           name: ${{ steps.version.outputs.version }}
           tag_name: ${{ github.ref }}
-          token: ${{ github.token }}
-          permissions:
-          contents: write  
+          token: ${{ secrets.PAT }}
+
