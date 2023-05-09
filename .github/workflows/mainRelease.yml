@@ -13,7 +13,7 @@ jobs:
       - name: 'Checkout source code'
         uses: 'actions/checkout@v2'
         with:
-          ref: ${{ github.ref }}
+          ref: ${{ github.ref }
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
@@ -21,4 +21,4 @@ jobs:
           body_path: CHANGELOG.md
           name: ${{ steps.version.outputs.version }}
           tag_name: ${{ github.ref }}
-          token: ${{ secrets.PAT }}
+          token: ${{ github.token }}
