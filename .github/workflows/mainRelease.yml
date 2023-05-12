@@ -6,6 +6,9 @@ on:
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
 name: Create Release
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read  # This is required for actions/checkout
 
 jobs:
   build:
